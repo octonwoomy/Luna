@@ -17,8 +17,10 @@
     <a href="https://discord.gg/6BqTwN2y9K">
       <button class="btns">DISCORD</button></a
     >
-    <h3>Currently Working On:</h3>
-    <img src="../videos/vim.png" alt="vim logo" />
+    <div>
+      <h3>Currently Working On:</h3>
+      <img src="../videos/vim.png" alt="vim logo" />
+    </div>
   </div>
   <div class="video"><Videos /></div>
 </main>
@@ -46,7 +48,7 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
   }
   a {
     text-decoration: none;
