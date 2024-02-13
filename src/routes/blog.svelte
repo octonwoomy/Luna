@@ -34,25 +34,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-  }
-  .container figure {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    align-items: center;
   }
   figure {
     max-height: 350px;
     width: 550px;
-    background-color: white;
+    background-color: #2f2f2f;
     text-align: center;
-    border: 10px solid white;
+    border: 10px solid #2f2f2f;
     font-size: 20px;
-  }
-  figure img {
-    object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
   }
 </style>
