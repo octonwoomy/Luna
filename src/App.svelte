@@ -8,6 +8,7 @@
   import Rest from "./components/rest.svelte";
   import Blog from "./routes/blog.svelte";
   import SC from "./blogs/sitecreation.svelte";
+  import TH from "./blogs/thpad.svelte";
   const routes = {
     "/": Home,
     "/portfolio": Portfolio,
@@ -17,6 +18,7 @@
     "/blog": Blog,
     "/restapi": Rest,
     "/sitecreation": SC,
+    "/thinkpad": TH,
   };
 </script>
 

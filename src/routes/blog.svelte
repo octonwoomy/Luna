@@ -12,10 +12,10 @@
       <figcaption>Explore the process behind this sites creation!</figcaption>
     </figure>
     <figure>
-      <a href="#/">
-        <img src="" alt="" />
+      <a href="#/thinkpad">
+        <img src="../videos/chat.png" alt="thinkpad t420 review" />
       </a>
-      <figcaption></figcaption>
+      <figcaption>Falling in love with an 8 year laptop</figcaption>
     </figure>
   </div>
 </main>
