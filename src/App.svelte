@@ -6,7 +6,7 @@
   import Chat from "./components/chatbot.svelte";
   import Compressor from "./components/compressor.svelte";
   import Rest from "./components/rest.svelte";
-  import Blog from "./blogs/blog.svelte";
+  import Blog from "./routes/blog.svelte";
   import SC from "./blogs/sitecreation.svelte";
   const routes = {
     "/": Home,

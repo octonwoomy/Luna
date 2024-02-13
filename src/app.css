@@ -2,6 +2,7 @@
 
 body {
   margin: 0;
+  padding: 0;
   color: white;
   background-image: url("../videos/background.jpg");
   background-size: 100% !important;
