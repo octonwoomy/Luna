@@ -1,6 +1,7 @@
 <nav>
-  <a href="/">Home</a> 
+  <a href="/">Home</a>
   <a href="#/portfolio">Portfolio</a>
+  <a href="#/blog">Blog</a>
 </nav>
 
 <style>

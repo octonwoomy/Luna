@@ -11,7 +11,7 @@
 
 <style>
   main {
-    background-image: url("videos/background.jpg");
+    width: 100%;
     height: 100vh;
   }
   .btns {

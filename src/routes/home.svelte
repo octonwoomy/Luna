@@ -1,6 +1,7 @@
 <script>
   import Nav from "../components/nav.svelte";
   import Videos from "../components/videos.svelte";
+  let newBlog = "#/sitecreation";
 </script>
 
 <main>
@@ -18,8 +19,8 @@
       <button class="btns">DISCORD</button></a
     >
     <div>
-      <h3>Currently Working On:</h3>
-      <img src="../videos/vim.png" alt="vim logo" />
+      <h2>Latest Blog Post</h2>
+      <a href={newBlog}><img src="" alt="latest blog post" /></a>
     </div>
   </div>
   <div class="video"><Videos /></div>
