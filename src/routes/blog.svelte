@@ -7,13 +7,13 @@
   <div class="container">
     <figure>
       <a href="#/sitecreation"
-        ><img src="../videos/aou.png" alt="creation of site" />
+        ><img src="../videos/svelte.png" alt="creation of site" />
       </a>
       <figcaption>Explore the process behind this sites creation!</figcaption>
     </figure>
     <figure>
       <a href="#/thinkpad">
-        <img src="../videos/chat.png" alt="thinkpad t420 review" />
+        <img src="../videos/tpad.png" alt="thinkpad t420 review" />
       </a>
       <figcaption>Falling in love with an 8 year laptop</figcaption>
     </figure>
@@ -38,7 +38,7 @@
   }
   figure {
     max-height: 350px;
-    width: 550px;
+    width: 500px;
     background-color: #2f2f2f;
     text-align: center;
     border: 10px solid #2f2f2f;

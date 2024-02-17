@@ -18,9 +18,11 @@
     <a href="https://discord.gg/6BqTwN2y9K">
       <button class="btns">DISCORD</button></a
     >
-    <div>
+    <div class="blog">
       <h2>Latest Blog Post</h2>
-      <a href={newBlog}><img src="" alt="latest blog post" /></a>
+      <a href={newBlog}>
+        <img src="../videos/svelte.png" alt="new blog post" />
+      </a>
     </div>
   </div>
   <div class="video"><Videos /></div>
@@ -36,7 +38,7 @@
     background-color: rgba(90, 90, 90, 0.5);
     backdrop-filter: blur(10px);
     max-width: 1000px;
-    height: 700px;
+    height: 500px;
     margin: 35px auto;
     padding: 10px;
     border-radius: 20px;
@@ -44,12 +46,19 @@
   h1 {
     font-size: 50px;
   }
+  .blog img {
+    height: 300px;
+    width: 500px;
+  }
+  h2 {
+    font-size: 45px;
+  }
   .video {
     text-align: center;
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
   }
   a {
     text-decoration: none;
@@ -65,10 +74,6 @@
     background-color: black;
     border: none;
     border-radius: 5px;
-  }
-  img {
-    width: 100px;
-    height: 100px;
   }
   @media screen and (max-width: 600px) {
     .main {
