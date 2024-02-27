@@ -1,6 +1,5 @@
 <script>
   import Nav from "./nav.svelte";
-  import Prism from 'prismjs';
   let code = `
 #include <stdio.h>
 #include <stdlib.h>
@@ -29,15 +28,17 @@ int main() {
   return 0;
 }
 `;
-  let language = 'clike';
   function timer() {
     let hour = 0;
     let minute = 0;
     let second = 0;
 
     setInterval(() => {
-    const formatTimePart = (timePart) => (timePart < 10 ? `0${timePart}` : timePart);
-    document.getElementById("clock").textContent = `Time: ${formatTimePart(hour)}:${formatTimePart(minute)}:${formatTimePart(second)}`
+      const formatTimePart = (timePart) =>
+        timePart < 10 ? `0${timePart}` : timePart;
+      document.getElementById("clock").textContent = `Time: ${formatTimePart(
+        hour,
+      )}:${formatTimePart(minute)}:${formatTimePart(second)}`;
       second++;
       if (second === 60) {
         minute++;
@@ -46,33 +47,40 @@ int main() {
           hour++;
           minute = 0;
           if (hour === 24) {
-           hour = 0;
+            hour = 0;
+          }
         }
       }
-    }
-  }, 1000);
-}
-
-
+    }, 1000);
+  }
 </script>
-<Nav />
-<br>
-<br>
-<main>
-  <div id="clock">Time: </div>
-  <button on:click={timer}>Start Timer</button>
-</main>
-<div class="code">
-  {@html Prism.highlight(code, Prism.languages[language], "c")}
-</div>
 
+<Nav />
+<main>
+  <div class="container">
+    <textarea readonly>
+      {code}
+    </textarea>
+    <h1 id="clock">Time:</h1>
+    <button on:click={timer}>Start Timer</button>
+  </div>
+</main>
 
 <style>
-  .code {
-    white-space: pre-wrap;
-  
+  main {
+    height: 100vh;
+    width: 100%;
+    display: grid;
   }
-  main{
-    height: 100%;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container textarea {
+    resize: none;
+    height: 75%;
+    width: 30%;
+    overflow: hidden;
   }
 </style>
