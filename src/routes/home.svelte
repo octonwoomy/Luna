@@ -40,20 +40,11 @@
     max-width: 1000px;
     height: 550px;
     margin: 35px auto;
-    margin-top: 170px;
     padding: 10px;
     border-radius: 20px;
   }
   main > h1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -350%);
     font-size: 50px;
-    background-color: rgba(90, 90, 90, 0.5);
-    backdrop-filter: blur(10px);
-    width: 1020px;
-    border-radius: 20px;
   }
   .blog img {
     height: 300px;
