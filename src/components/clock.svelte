@@ -1,5 +1,6 @@
 <script>
   import Nav from "./nav.svelte";
+  import Prism from "prismjs";
   let code = `
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,7 +33,7 @@ int main() {
     let hour = 0;
     let minute = 0;
     let second = 0;
-
+    let language = "clang";
     setInterval(() => {
       const formatTimePart = (timePart) =>
         timePart < 10 ? `0${timePart}` : timePart;
@@ -58,11 +59,11 @@ int main() {
 <Nav />
 <main>
   <div class="container">
-    <textarea readonly>
-      {code}
-    </textarea>
     <h1 id="clock">Time:</h1>
     <button on:click={timer}>Start Timer</button>
+    <code>
+      {@html Prism.highlight(code, Prism.languages["clike"])}
+    </code>
   </div>
 </main>
 
@@ -77,10 +78,7 @@ int main() {
     justify-content: center;
     align-items: center;
   }
-  .container textarea {
-    resize: none;
-    height: 75%;
-    width: 30%;
-    overflow: hidden;
+  code {
+    white-space: pre-wrap;
   }
 </style>
