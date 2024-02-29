@@ -33,7 +33,6 @@ int main() {
     let hour = 0;
     let minute = 0;
     let second = 0;
-    let language = "clang";
     setInterval(() => {
       const formatTimePart = (timePart) =>
         timePart < 10 ? `0${timePart}` : timePart;
@@ -58,9 +57,9 @@ int main() {
 
 <Nav />
 <main>
+  <h1 id="clock">Time: 00:00:00</h1>
+  <button on:click={timer}>Start Timer</button>
   <div class="container">
-    <h1 id="clock">Time:</h1>
-    <button on:click={timer}>Start Timer</button>
     <code>
       {@html Prism.highlight(code, Prism.languages["clike"])}
     </code>
@@ -68,10 +67,26 @@ int main() {
 </main>
 
 <style>
+  main > h1,
+  button {
+    text-align: center;
+  }
+  button {
+    margin: auto;
+    margin-top: -20px;
+    width: 160px;
+    height: 40px;
+    font-size: 18px;
+    background-color: rgba(90, 90, 90);
+    color: white;
+    border-radius: 6px;
+  }
   main {
+    padding-top: 40px;
     height: 100vh;
     width: 100%;
     display: grid;
+    padding-bottom: 30px;
   }
   .container {
     display: flex;
@@ -79,6 +94,11 @@ int main() {
     align-items: center;
   }
   code {
+    height: 450px;
+    width: 420px;
+    padding-left: 20px;
+    padding-bottom: 20px;
     white-space: pre-wrap;
+    background-color: rgba(0, 0, 0);
   }
 </style>

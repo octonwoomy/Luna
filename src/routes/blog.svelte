@@ -15,7 +15,7 @@
       <a href="#/thinkpad">
         <img src="../videos/tpad.png" alt="thinkpad t420 review" />
       </a>
-      <figcaption>Falling in love with an 8 year laptop</figcaption>
+      <figcaption>Falling in love with an 13 year laptop</figcaption>
     </figure>
   </div>
 </main>
