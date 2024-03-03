@@ -44,17 +44,26 @@ func main() {
 </script>
 
 <Nav />
-<div class="container">
+<main>
+	<h1>REST API in golang</h1>
 	<div class="code">
 		{@html Prism.highlight(code, Prism.languages[language], "go")}
 	</div>
-</div>
+</main>
 
 <style>
-	.container {
-		width: 500px;
+	main > h1 {
+		text-align: center;
 	}
+	main {
+		padding-top: 45px;
+	}
+
 	.code {
+		background: none;
+		width: 30%;
+		margin-left: 400px;
+		padding: 45px;
 		background-color: rgba(0, 0, 0);
 		white-space: pre-wrap;
 	}
