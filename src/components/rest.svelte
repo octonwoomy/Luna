@@ -1,8 +1,7 @@
 <script>
-  import Prism from 'prismjs';
-  import Nav from './nav.svelte';
-  let code = 
-    `
+	import Prism from "prismjs";
+	import Nav from "./nav.svelte";
+	let code = `
 package main
 
 import (
@@ -15,7 +14,7 @@ import (
 )
 
 func returnJSON(context *gin.Context) {
-	file, err := os.Open("dummy.json")
+	file, err := os.Open("data.json")
 	if err != nil {
 		fmt.Println("Error opening file:", err)
 		return
@@ -33,24 +32,30 @@ func returnJSON(context *gin.Context) {
 
 func main() {
 	router := gin.Default()
-	router.GET("/dummy", returnJSON)
-	err := router.Run("localhost:0063")
+	router.GET("/data", returnJSON)
+	err := router.Run("localhost:6969")
 	if err != nil {
 		fmt.Println("Error starting the server:", err)
 	}
 }
 
     `;
-  let language = 'clike';
+	let language = "clike";
 </script>
+
 <Nav />
-<div class="code">
-  {@html Prism.highlight(code, Prism.languages[language], "c")}
+<div class="container">
+	<div class="code">
+		{@html Prism.highlight(code, Prism.languages[language], "go")}
+	</div>
 </div>
 
-
 <style>
-  .code {
-    white-space: pre-wrap;
-  }
+	.container {
+		width: 500px;
+	}
+	.code {
+		background-color: rgba(0, 0, 0);
+		white-space: pre-wrap;
+	}
 </style>
