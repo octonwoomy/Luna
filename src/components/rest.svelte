@@ -1,6 +1,10 @@
 <script>
 	import Prism from "prismjs";
 	import Nav from "./nav.svelte";
+	let data = "";
+	function getData() {
+		data = `{"Hello": "World!"}`;
+	}
 	let code = `
 package main
 
@@ -46,6 +50,11 @@ func main() {
 <Nav />
 <main>
 	<h1>REST API in golang</h1>
+	<div class="data">
+		<h2>Data Returned:</h2>
+		<h3>{data}</h3>
+		<button on:click={getData}>Fetch!</button>
+	</div>
 	<div class="code">
 		{@html Prism.highlight(code, Prism.languages[language], "go")}
 	</div>
@@ -56,15 +65,25 @@ func main() {
 		text-align: center;
 	}
 	main {
-		padding-top: 45px;
+		margin-top: 45px;
 	}
-
 	.code {
-		background: none;
-		width: 30%;
+		padding: 30px;
+		margin-bottom: 50px;
 		margin-left: 400px;
-		padding: 45px;
 		background-color: rgba(0, 0, 0);
 		white-space: pre-wrap;
+	}
+	.data {
+		padding-top: -50px;
+		padding-bottom: 20px;
+		text-align: center;
+		margin: 20px;
+		width: 40%;
+		background-color: rgba(90, 90, 90, 0.5);
+		backdrop-filter: blur(10px);
+		display: grid;
+		justify-content: center;
+		margin-left: 400px;
 	}
 </style>
